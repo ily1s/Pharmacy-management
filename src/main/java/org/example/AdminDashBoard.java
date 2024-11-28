@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 
-public class PharmacyDashBoard extends Application {
+public class AdminDashBoard extends Application {
 
     @Override
     public void start(Stage primaryStage) {
@@ -35,12 +35,10 @@ public class PharmacyDashBoard extends Application {
         line.setStyle("-fx-background-color: white;");
 
         // Create buttons with icons
-        Button addMedicineButton = createButton("Add Medicine", "/addMedicine.png");
-        Button sellMedicineButton = createButton("Sell Medicine", "/sellMedicine.png");
-        Button viewMedicineButton = createButton("View Medicine", "/viewUser.png");
-        Button viewBillButton = createButton("View Bill", "/viewBill.png");
-        Button updateMedicineButton = createButton("Update Medicine", "/updateUser.png");
+        Button addUserButton = createButton("Add User", "/addUser.png");
         Button profileButton = createButton("Profile", "/profile.png");
+        Button viewUserButton = createButton("View User", "/viewUser.png");
+        Button updateUserButton = createButton("Update User", "/updateUser.png");
         Button logoutButton = createButton("Logout", "/logout.png");
         Button exitButton = createButton("Exit", "/exit.png");
 
@@ -52,21 +50,13 @@ public class PharmacyDashBoard extends Application {
         gridPane.setAlignment(Pos.CENTER);
 
         // Add buttons to the grid
-        gridPane.add(addMedicineButton, 0, 0);
-        gridPane.add(sellMedicineButton, 1, 0);
-        gridPane.add(viewMedicineButton, 0, 1);
-        gridPane.add(viewBillButton, 1, 1);
-        gridPane.add(updateMedicineButton, 0, 2);
-        gridPane.add(profileButton, 1, 2);
+        gridPane.add(addUserButton, 0, 0);
+        gridPane.add(profileButton, 1, 0);
+        gridPane.add(viewUserButton, 0, 1);
+        gridPane.add(updateUserButton, 1, 1);
+        gridPane.add(logoutButton, 0, 2);
+        gridPane.add(exitButton, 1, 2);
 
-        // Add extra space between the logout/exit buttons and the others
-        Pane spacer = new Pane();
-        spacer.setMinHeight(100); // Add vertical space
-        gridPane.add(spacer, 0, 3); // Place the spacer in the layout
-
-        // Add logout and exit buttons in separate rows
-        gridPane.add(logoutButton, 0, 4);
-        gridPane.add(exitButton, 1, 4);
 
         // Add gridBox to a StackPane to control its background
         StackPane gridContainer = new StackPane();
@@ -84,7 +74,7 @@ public class PharmacyDashBoard extends Application {
 
         // Scene and Stage
         Scene scene = new Scene(root, 1000, 1000);
-        primaryStage.setTitle("Pharmacy Dashboard");
+        primaryStage.setTitle("Admin Dashboard");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
