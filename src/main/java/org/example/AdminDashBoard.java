@@ -113,18 +113,18 @@ public class AdminDashBoard extends Application {
             // Set a gap between icon and text
             button.setGraphicTextGap(15);
 
-            // Add specific action for "View Bill"
-            if ("View Bill".equals(text)) {
+            if ("Update User".equals(text)) {
                 button.setOnAction(event -> {
-                    ViewBillPage viewBillPage = new ViewBillPage();
+                    UpdateUserPage UpdateUserPage = new UpdateUserPage();
                     try {
                         Stage stage = (Stage) button.getScene().getWindow(); // Get current stage
-                        viewBillPage.start(stage); // Launch the View Bill page on the same stage
+                        UpdateUserPage.start(stage); // Launch the View Bill page on the same stage
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 });
             }
+
             if ("Exit".equals(text)) {
                 button.setOnAction(event -> {
                     // Create a confirmation dialog
