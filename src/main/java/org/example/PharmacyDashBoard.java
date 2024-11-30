@@ -105,12 +105,12 @@ public class PharmacyDashBoard extends Application {
             Button button = new Button(text, icon);
             button.setStyle("-fx-background-color: white; "
                     + "-fx-text-fill: black; "
-                    + "-fx-font-size: 25px; "  // Increase font size
+                    + "-fx-font-size: 25px; "
                     + "-fx-font-weight: bold; "
                     + "-fx-border-color: #dcdcdc; "
                     + "-fx-border-width: 2px; "
-                    + "-fx-background-radius: 25; "  // Rounded edges
-                    + "-fx-border-radius: 25;");  // Rounded border
+                    + "-fx-background-radius: 25; "
+                    + "-fx-border-radius: 25;");
             button.setPrefWidth(1000);
             button.setPrefHeight(150);
             button.setGraphicTextGap(20);
